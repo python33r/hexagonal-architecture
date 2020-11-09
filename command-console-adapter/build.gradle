@@ -1,0 +1,24 @@
+// For use with JDK 11 on your own PC
+
+plugins {
+  id 'java'
+  id 'application'
+  id 'idea'
+}
+
+dependencies {
+  implementation 'com.google.inject:guice:4.2.3'
+  implementation project(':appcore')
+  implementation project(':inmemory-repository-adapter')
+}
+
+idea {
+  module {
+    outputDir file('build/classes/main')
+    testOutputDir file('build/classes/test')
+  }
+}
+
+mainClassName = 'com.codespeaks.hexagonal.adapter.console.CommandClient'
+
+defaultTasks 'run'

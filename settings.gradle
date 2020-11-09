@@ -1,0 +1,4 @@
+rootProject.name = 'hexagonal-example'
+include 'appcore'
+include 'inmemory-repository-adapter'
+include 'command-console-adapter'
