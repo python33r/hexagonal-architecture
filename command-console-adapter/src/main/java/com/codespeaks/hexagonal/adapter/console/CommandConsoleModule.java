@@ -1,7 +1,7 @@
 
 package com.codespeaks.hexagonal.adapter.console;
 
-import com.codespeaks.hexagonal.adapter.repository.InMemoryCusotmerRepositoryImpl;
+import com.codespeaks.hexagonal.adapter.repository.InMemoryCustomerRepositoryImpl;
 import com.codespeaks.hexagonal.repository.CustomerRepository;
 import com.codespeaks.hexagonal.service.CustomerService;
 import com.codespeaks.hexagonal.service.CustomerServiceImpl;
@@ -13,7 +13,7 @@ import com.google.inject.AbstractModule;
 public class CommandConsoleModule extends AbstractModule {
     @Override
     protected void configure() {
-        bind(CustomerRepository.class).to(InMemoryCusotmerRepositoryImpl.class);
+        bind(CustomerRepository.class).to(InMemoryCustomerRepositoryImpl.class);
         bind(CustomerService.class).to(CustomerServiceImpl.class);
         bind(CommandInterface.class).to(CommandInterfaceImpl.class);
     }

@@ -5,8 +5,8 @@ public class Customer {
     private int customerId;
     private String firstName;
     private String lastName;
-    private MemeberStatus status;
-    private int rewardedpoints;
+    private MemberStatus status;
+    private int rewardPoints;
 
     public int getCustomerId() {
         return customerId;
@@ -32,20 +32,20 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public MemeberStatus getStatus() {
+    public MemberStatus getStatus() {
         return status;
     }
 
-    public void setStatus(MemeberStatus status) {
+    public void setStatus(MemberStatus status) {
         this.status = status;
     }
 
-    public int getRewardedpoints() {
-        return rewardedpoints;
+    public int getRewardPoints() {
+        return rewardPoints;
     }
 
-    public void setRewardedpoints(int rewardedpoints) {
-        this.rewardedpoints = rewardedpoints;
+    public void setRewardPoints(int rewardPoints) {
+        this.rewardPoints = rewardPoints;
     }
 
 }

@@ -8,26 +8,26 @@ import java.util.Optional;
 
 import com.codespeaks.hexagonal.adapter.repository.utils.RepositoryUtils;
 import com.codespeaks.hexagonal.domain.Customer;
-import com.codespeaks.hexagonal.domain.MemeberStatus;
+import com.codespeaks.hexagonal.domain.MemberStatus;
 import com.codespeaks.hexagonal.exception.CustomerNotFoundException;
 import com.codespeaks.hexagonal.repository.CustomerRepository;
 
-public class InMemoryCusotmerRepositoryImpl implements CustomerRepository {
+public class InMemoryCustomerRepositoryImpl implements CustomerRepository {
 
     private Map<Integer, Customer> dataStore = new HashMap<>();
 
-    public Customer CreateCustomer(Customer customer) {
+    public Customer createCustomer(Customer customer) {
 
         customer.setCustomerId(RepositoryUtils.getPrimaryKey());
-        customer.setRewardedpoints(500);
-        customer.setStatus(MemeberStatus.BRONZE);
+        customer.setRewardPoints(500);
+        customer.setStatus(MemberStatus.BRONZE);
 
         dataStore.putIfAbsent(customer.getCustomerId(), customer);
 
         return customer;
     }
 
-    public Customer UpdateCustomer(Customer customer) throws CustomerNotFoundException {
+    public Customer updateCustomer(Customer customer) throws CustomerNotFoundException {
 
         if (!dataStore.containsKey(customer.getCustomerId())) {
             throw new CustomerNotFoundException("Customer " + customer.getCustomerId() + "can't be found");
