@@ -21,17 +21,17 @@ public class CommandClient {
         boolean exit = false;
         while (!exit) {
             String cmd = CommandConsoleUtils.readString(scanner);
-            if ("LS".equalsIgnoreCase(cmd)) {
+            if ("ls".equalsIgnoreCase(cmd)) {
                 commandConsole.list(scanner);
-            } else if ("REG".equalsIgnoreCase(cmd)) {
+            } else if ("reg".equalsIgnoreCase(cmd)) {
                 commandConsole.register(scanner);
-            } else if ("UG".equals(cmd)) {
+            } else if ("ug".equalsIgnoreCase(cmd)) {
                 commandConsole.upgrade(scanner);
-            } else if ("DG".equals(cmd)) {
+            } else if ("dg".equalsIgnoreCase(cmd)) {
                 commandConsole.downgrade(scanner);
-            } else if ("INFO".equals(cmd)) {
+            } else if ("info".equalsIgnoreCase(cmd)) {
                 commandConsole.info();
-            } else if ("EXIT".equalsIgnoreCase(cmd)) {
+            } else if ("exit".equalsIgnoreCase(cmd)) {
                 exit = true;
             } else {
                 commandConsole.info();
