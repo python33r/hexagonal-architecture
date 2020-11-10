@@ -9,18 +9,16 @@ public class CommandConsoleUtils {
     public static String readString(Scanner scanner) {
         System.out.print( "> " );
         return scanner.next();
-      }
+    }
 
-
-    public static void printCustomtoer(Customer c) {
-
+    public static void printCustomer(Customer c) {
         System.out.println("Customer Id: " + c.getCustomerId());
         System.out.println("Customer Name: " + c.getFirstName() +  " " + c.getLastName());
         System.out.println("Customer Points: " + c.getRewardPoints());
         System.out.println("Customer Status: " + c.getStatus());
     }
 
-    public static void printMainmenu() {
+    public static void printMainMenu() {
         System.out.println("LS : list all customers");
         System.out.println("REG : register a customer");
         System.out.println("UG : upgrade a customer");

@@ -25,8 +25,7 @@ public class CommandInterfaceImpl implements CommandInterface {
 
         customers.stream()
             .forEach(c -> {
-
-                CommandConsoleUtils.printCustomtoer(c);
+                CommandConsoleUtils.printCustomer(c);
                 System.out.println("------------------------------------");
             });
 
@@ -45,7 +44,7 @@ public class CommandInterfaceImpl implements CommandInterface {
         Customer registered = customerService.registerCustomer(unregistered);
 
         System.out.println("Customer registered successfully with the following : ");
-        CommandConsoleUtils.printCustomtoer(registered);
+        CommandConsoleUtils.printCustomer(registered);
 
     }
 
@@ -56,7 +55,7 @@ public class CommandInterfaceImpl implements CommandInterface {
 
         if (customerWrapper.isPresent()) {
             System.out.println("The Customer you want to upgrade is as following");
-            CommandConsoleUtils.printCustomtoer(customerWrapper.get());
+            CommandConsoleUtils.printCustomer(customerWrapper.get());
             System.out.println("Do you want to proceed ? Y(es)/N(o)");
             String confirm = CommandConsoleUtils.readString(scanner);
 
@@ -64,7 +63,7 @@ public class CommandInterfaceImpl implements CommandInterface {
                 try {
                     Customer customer = customerService.upgradeCustomer(customerWrapper.get());
                     System.out.println("Customer upgrade successful with the following : ");
-                    CommandConsoleUtils.printCustomtoer(customer);
+                    CommandConsoleUtils.printCustomer(customer);
                 } catch (CustomerNotFoundException e) {
                     System.out.println("Customer upgrade failed");
                 }
@@ -83,7 +82,7 @@ public class CommandInterfaceImpl implements CommandInterface {
 
         if (customerWrapper.isPresent()) {
             System.out.println("The Customer you want to downgrade is as following");
-            CommandConsoleUtils.printCustomtoer(customerWrapper.get());
+            CommandConsoleUtils.printCustomer(customerWrapper.get());
             System.out.println("Do you want to proceed ? Y(es)/N(o)");
             String confirm = CommandConsoleUtils.readString(scanner);
 
@@ -91,7 +90,7 @@ public class CommandInterfaceImpl implements CommandInterface {
                 try {
                     Customer customer = customerService.downgradeCustomer(customerWrapper.get());
                     System.out.println("Customer downgrade successful with the following : ");
-                    CommandConsoleUtils.printCustomtoer(customer);
+                    CommandConsoleUtils.printCustomer(customer);
                 } catch (CustomerNotFoundException e) {
                     System.out.println("Customer downgrade failed");
                 }
@@ -104,7 +103,7 @@ public class CommandInterfaceImpl implements CommandInterface {
     }
 
     public void info() {
-        CommandConsoleUtils.printMainmenu();
+        CommandConsoleUtils.printMainMenu();
     }
 
 }
