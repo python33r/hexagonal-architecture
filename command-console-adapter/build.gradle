@@ -19,6 +19,11 @@ idea {
   }
 }
 
-mainClassName = 'com.codespeaks.hexagonal.adapter.console.CommandClient'
+application {
+  mainClass = 'com.codespeaks.hexagonal.adapter.console.CommandClient'
+  run {
+    standardInput = System.in
+  }
+}
 
 defaultTasks 'run'

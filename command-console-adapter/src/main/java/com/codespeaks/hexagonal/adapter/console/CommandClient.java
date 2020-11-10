@@ -17,6 +17,8 @@ public class CommandClient {
 
     public static void start(CommandInterface commandConsole) {
 
+        CommandConsoleUtils.printBanner();
+
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         while (!exit) {

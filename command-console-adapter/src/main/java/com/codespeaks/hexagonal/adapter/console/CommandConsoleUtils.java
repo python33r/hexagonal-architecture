@@ -23,8 +23,12 @@ public class CommandConsoleUtils {
         System.out.println("reg  - register a customer");
         System.out.println("ug   - upgrade a customer");
         System.out.println("dg   - downgrade a customer");
-        System.out.println("info - show main menu command");
+        System.out.println("info - show menu of commands");
         System.out.println("exit - exit application");
     }
 
+    public static void printBanner() {
+        System.out.println();
+        System.out.println("Customer Admin Console");
+    }
 }

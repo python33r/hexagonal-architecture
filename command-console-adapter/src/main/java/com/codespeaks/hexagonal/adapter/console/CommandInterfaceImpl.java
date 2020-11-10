@@ -50,7 +50,7 @@ public class CommandInterfaceImpl implements CommandInterface {
     }
 
     public void upgrade(Scanner scanner) {
-        System.out.println("What is the customer Id you want to upgrade?");
+        System.out.println("What is the Customer Id you want to upgrade?");
         String customerId = CommandConsoleUtils.readString(scanner);
         Optional<Customer> customerWrapper = customerService.findCustomerById(Integer.valueOf(customerId));
 
@@ -77,7 +77,7 @@ public class CommandInterfaceImpl implements CommandInterface {
     }
 
     public void downgrade(Scanner scanner) {
-        System.out.println("What is the customer Id you want to downgrade?");
+        System.out.println("What is the Customer Id you want to downgrade?");
         String customerId = CommandConsoleUtils.readString(scanner);
         Optional<Customer> customerWrapper = customerService.findCustomerById(Integer.valueOf(customerId));
 
