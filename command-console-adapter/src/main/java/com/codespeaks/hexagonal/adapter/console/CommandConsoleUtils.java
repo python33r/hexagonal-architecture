@@ -7,8 +7,8 @@ import com.codespeaks.hexagonal.domain.Customer;
 public class CommandConsoleUtils {
 
     public static String readString(Scanner scanner) {
-        System.out.print( "> " );
-        return scanner.next();
+        System.out.print("> ");
+        return scanner.nextLine();
     }
 
     public static void printCustomer(Customer c) {
@@ -19,12 +19,12 @@ public class CommandConsoleUtils {
     }
 
     public static void printMainMenu() {
-        System.out.println("LS : list all customers");
-        System.out.println("REG : register a customer");
-        System.out.println("UG : upgrade a customer");
-        System.out.println("DG : downgrade a customer");
-        System.out.println("INFO : show main menu command");
-        System.out.println("EXIT : exit application");
+        System.out.println("ls   - list all customers");
+        System.out.println("reg  - register a customer");
+        System.out.println("ug   - upgrade a customer");
+        System.out.println("dg   - downgrade a customer");
+        System.out.println("info - show main menu command");
+        System.out.println("exit - exit application");
     }
 
 }

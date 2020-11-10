@@ -33,8 +33,6 @@ public class CommandClient {
                 commandConsole.info();
             } else if ("exit".equalsIgnoreCase(cmd)) {
                 exit = true;
-            } else {
-                commandConsole.info();
             }
         }
 
